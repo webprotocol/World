@@ -1,0 +1,16 @@
+{
+  "name": "world",
+  "version": "1.0.0",
+  "description": "MySQL world",
+  "main": "sum.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "jquery": "^2.1.4",
+    "jquery-ui": "^1.10.5"
+  }
+}

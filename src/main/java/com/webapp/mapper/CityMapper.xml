@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.webapp.mapper.CityMapper">
+
+<select id="selectDistricts" parameterType="string" resultType="string">
+	select distinct district
+	  from city
+	 where countryCode = #{countryCode}
+</select>
+
+<insert id="insert" 
+		parameterType="com.webapp.model.City"
+		useGeneratedKeys="true"
+		keyProperty="id">
+	insert into city
+	(
+		name,
+		countryCode,
+		district,
+		population
+	)
+	values
+	(
+		#{name},
+		#{country.code},
+		#{district},
+		#{population}
+	)
+</insert>
+
+</mapper>
